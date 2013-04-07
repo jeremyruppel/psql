@@ -16,4 +16,11 @@ Gem::Specification.new do |gem|
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
+
+  gem.add_dependency 'cocaine', '0.5.1'
+
+  gem.add_development_dependency 'wrong',          '0.7.0'
+  gem.add_development_dependency 'pry',            '0.9.12'
+  gem.add_development_dependency 'guard-minitest', '0.5.0'
+  gem.add_development_dependency 'rb-fsevent',     '~> 0.9'
 end

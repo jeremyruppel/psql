@@ -1,5 +1,7 @@
-require "psql/version"
+require 'psql/version'
+require 'cocaine'
 
-module Psql
-  # Your code goes here...
+module PSQL
+  autoload :Database, 'psql/database'
+  autoload :Table,    'psql/table'
 end
