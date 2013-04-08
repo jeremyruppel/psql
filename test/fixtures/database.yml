@@ -1,6 +1,6 @@
 development:
   adapter:  postgresql
-  database: development_database_name
+  database: psql_gem_development
 test:
   adapter:  postgresql
-  database: test_database_name
+  database: psql_gem_test
