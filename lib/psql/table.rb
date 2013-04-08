@@ -12,16 +12,20 @@ module PSQL
     #
     def column( column_name )
       column = columns.find do |col|
-        col[ 'column' ] == column_name
+        col[ 'name' ] == column_name
       end
 
       if !column
         raise "Table #{name} does not have a column named '#{column_name}'."
       end
 
-      Column.new column[ 'column' ], column[ 'type' ], column[ 'modifiers' ]
+      Column.new column[ 'name' ], column[ 'type' ], column[ 'modifiers' ]
     end
     alias :[] :column
+
+    def column_names
+      columns.map { |col| col[ 'name' ] }
+    end
 
     private
 
@@ -31,7 +35,7 @@ module PSQL
       @columns ||= PSQL '\d :name',
         :name    => name,
         :dbname  => dbname,
-        :headers => %w| column type modifiers |
+        :headers => %w| name type modifiers |
     end
   end
 end

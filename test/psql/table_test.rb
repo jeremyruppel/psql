@@ -19,4 +19,8 @@ class TableTest < MiniTest::Unit::TestCase
     table = PSQL::Table.new 'posts', 'psql_gem_test'
     assert { table[ 'title' ].is_a?( PSQL::Column ) }
   end
+  def test_column_names
+    table = PSQL::Table.new 'posts', 'psql_gem_test'
+    assert { table.column_names == %w| id title body created_at published_on published rating | }
+  end
 end
