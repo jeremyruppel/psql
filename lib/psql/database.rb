@@ -44,6 +44,10 @@ module PSQL
     def find_rails_database_name
       require 'yaml'
 
+      raise(<<-EOS.strip) unless ENV[ 'RAILS_ENV' ]
+      Cannot automatically determine rails database name because RAILS_ENV is not set.
+      EOS
+
       file = `find . -name database.yml`.chomp
       hash = YAML.load_file( file )
       hash[ ENV[ 'RAILS_ENV' ] ][ 'database' ]
