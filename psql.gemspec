@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["jeremy.ruppel@gmail.com"]
   gem.description   = %q{A simple ruby library for consuming the `psql` command.}
   gem.summary       = %q{A simple ruby library for consuming the `psql` command.}
-  gem.homepage      = ""
+  gem.homepage      = 'https://github.com/jeremyruppel/psql'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
