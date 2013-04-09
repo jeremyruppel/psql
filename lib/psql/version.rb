@@ -1,3 +1,3 @@
-module Psql
-  VERSION = "0.0.1"
+module PSQL
+  VERSION = '0.0.1'
 end

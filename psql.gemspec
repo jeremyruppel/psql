@@ -5,11 +5,11 @@ require 'psql/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "psql"
-  gem.version       = Psql::VERSION
+  gem.version       = PSQL::VERSION
   gem.authors       = ["Jeremy Ruppel"]
   gem.email         = ["jeremy.ruppel@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{A simple ruby library for consuming the `psql` command.}
+  gem.summary       = %q{A simple ruby library for consuming the `psql` command.}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
